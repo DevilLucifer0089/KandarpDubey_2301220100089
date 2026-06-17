@@ -30,3 +30,24 @@ class Solution
 
 
 -------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+class MinimumSteps {
+    public int minSteps(int distance, int[] steps) {
+        int maxStep = 0;
+        for (int s : steps) {
+            if (s > maxStep)
+            {
+                maxStep = s;
+            }
+        }
+        int count = distance / maxStep;   // number of max steps
+        int remainder = distance % maxStep;
+        if (remainder > 0) {
+            count++;
+        }
+
+        return count;
+    }
