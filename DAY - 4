@@ -120,7 +120,26 @@ class Solution {
 
 6. Merge Sorted Array(LeetCode 88)...
 
-
+class Solution 
+{
+    public void merge(int[] nums1, int m, int[] nums2, int n) 
+    {
+        int p1 = m-1 ; // pointer 1 for first array
+        int p2 = n-1 ; // pointer 2 for second array
+        int wrt_idx = m + n - 1 ; // position to insert element in the sorted array
+        while(p2 >= 0)
+        {
+            if(p1 >= 0 && nums1[p1] > nums2[p2])
+            {
+                nums1[wrt_idx--] = nums1[p1--] ; // if nums1 have greater elements
+            }
+            else
+            {
+                nums1[wrt_idx--] = nums2[p2--] ; // to exchange and copy elements
+            }
+        }
+    }
+}
 ------------------------------------------------------------------------------------------
 
 7. Bubble Sort...
