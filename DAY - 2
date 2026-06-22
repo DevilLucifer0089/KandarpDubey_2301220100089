@@ -1,3 +1,5 @@
+1. Palindrome Number...
+
 class Solution
 {
     public boolean isPalindrome(int x) 
@@ -34,6 +36,8 @@ class Solution
 
 
 
+2. Minimum Steps...
+
 class MinimumSteps {
     public int minSteps(int distance, int[] steps) {
         int maxStep = 0;
@@ -51,3 +55,131 @@ class MinimumSteps {
 
         return count;
     }
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+3. Palindrome String...
+
+import java.util.Scanner;
+public class PalindromeCheck {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        s = s.toLowerCase();
+
+        int left = 0;
+        int right = s.length() - 1;
+
+        boolean isPalindrome = true;
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                isPalindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+
+        if (isPalindrome) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a Palindrome");
+        }
+    }
+}
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+4. Find who will win A or B...
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n;
+        System.out.println("Enter a no.");
+        n = sc.nextInt();
+        
+        if(n%3 == 0){
+            System.out.println("B wins...");
+        }
+        else{
+            System.out.println("A wins...");
+        }
+    }
+}
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+5. Input an array and print it...
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        System.out.println("Enter the size of the array");
+        size = sc.nextInt();
+        int arr[] = new int[size];
+        System.out.println("enter "+ size + " elements");
+        for(int i=0;i<size;i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        for(int i=0;i<size;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+6. Calculate sum and average of an array...
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        int sum = 0;
+        System.out.println("Enter the size of the array");
+        size = sc.nextInt();
+        int arr[] = new int[size];
+        System.out.println("enter "+ size + " elements");
+        for(int i=0;i<size;i++)
+        {
+            arr[i] = sc.nextInt();
+            sum = sum + arr[i];
+        }
+       System.out.println("Sum is :" + sum);
+       System.out.println("Average is :" + sum/size);
+    }
+}
